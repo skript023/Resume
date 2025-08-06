@@ -28,11 +28,11 @@
             width: 70%;
             padding: 20px;
         }
-        img {
-            width: 180px; /* Adjust photo size */
-            height: 180px; /* Ensure equal width and height */
-            border-radius: 50%; /* Keeps the photo circular */
-            object-fit: cover; /* Prevents image distortion */
+        .img-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 20px;
         }
         h1 {
@@ -94,9 +94,51 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .download-btn:hover {
             background-color: #45a049;
+        }
+        .main li {
+            margin-bottom: 1rem;
+        }
+        .main li ul li {
+            margin-bottom: 0.5rem; /* atau sesuai kebutuhan */
+        }
+        body {
+            font-size: 13px;
+        }
+
+
+
+        /* PRINT SETTINGS */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                font-size: 9pt;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                border: none;
+            }
+            .download-btn {
+                display: none;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .sidebar {
+                background-color: #f5f5f5 !important;
+            }
+            .section-title {
+                background-color: #333 !important;
+                color: white !important;
+            }
+        }
+        @page {
+            size: A4;
+            margin: 5mm;
         }
     </style>
 </head>
@@ -104,7 +146,7 @@
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <img src="your-photo.jpg" alt="Profile Picture">
+            <img class="img-avatar" src="your-photo.jpg" alt="Profile Picture">
             <h1>Fatur Muhammad</h1>
             <div class="section">
                 <h2>Contact Me</h2>
@@ -119,6 +161,15 @@
                     <li>
                         <div class="skill-name">
                             <span>C++</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 100%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">
+                            <span>PHP</span>
                             <span>90%</span>
                         </div>
                         <div class="progress-bar-container">
@@ -127,38 +178,65 @@
                     </li>
                     <li>
                         <div class="skill-name">
-                            <span>PHP</span>
-                            <span>80%</span>
+                            <span>JavaScript/Typescript</span>
+                            <span>100%</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 75%;"></div>
+                            <div class="progress-bar" style="width: 100%;"></div>
                         </div>
                     </li>
                     <li>
                         <div class="skill-name">
                             <span>MySQL</span>
-                            <span>85%</span>
+                            <span>95%</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 85%;"></div>
+                            <div class="progress-bar" style="width: 95%;"></div>
                         </div>
                     </li>
                     <li>
                         <div class="skill-name">
                             <span>Python</span>
-                            <span>70%</span>
+                            <span>90%</span>
                         </div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" style="width: 70%;"></div>
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">
+                            <span>GO-Lang</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">
+                            <span>Lua</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 100%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-name">
+                            <span>C#</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
                         </div>
                     </li>
                 </ul>
@@ -171,16 +249,16 @@
                 <div class="section-title">Formal Education</div>
                 <ul>
                     <li><strong>English Literature</strong> - Gundarma University (2014 - 2018)</li>
-                    <li><strong>English Education</strong> - Indraprasta PGRI University (2020 - 2022)</li>
+                    <li><strong>English Education</strong> - Indraprasta PGRI University (2019 - 2022)</li>
                 </ul>
             </div>
             <div class="section">
                 <div class="section-title">Experience</div>
                 <ul>
                     <li style="margin-bottom: 1rem;">
-                        <strong>DevOps & Support (Contract)</strong> - PT. Neuroworks Indonesia (Jan 2023 - Now)
-                        <ul>
-                            <li>Manage CRM, Servers</li>
+                        <strong>Technical Support (Contract)</strong> - PT. Neuronworks Indonesia (Jan 2023 - October 2025)
+                        <ul style="margin-top: 1rem;">
+                            <li>Manage Siebel Oracle CRM, Servers</li>
                             <li>Product Development</li>
                             <li>IT Support Solver</li>
                             <li>Review feature with user</li>
@@ -192,7 +270,7 @@
                     </li>
                     <li style="margin-bottom: 1rem;">
                         <strong>Fullstack Developer (Freelance)</strong> - Telkom Property (Feb 2024 - Now)
-                        <ul>
+                        <ul style="margin-top: 1rem;">
                             <li>Create a technicians monitoring web based application</li>
                             <li>Migrate from PHP Native to Vue.Js as frontend and NestJs as backend</li>
                             <li>Setting Proxmox as Virtual Environment in Server</li>
@@ -202,6 +280,7 @@
                             <li>Setup Docker for containerized deployment</li>
                             <li>Test app before deployment</li>
                             <li>Test app after production</li>
+                            <li>Monitoring tool using Grafana Loki & Prometheus</li>
                         </ul>
                     </li>
                 </ul>
@@ -209,9 +288,75 @@
             <div class="section">
                 <div class="section-title">Certifications</div>
                 <ul>
-                    <li>Computer and Laptop Servicing (2021) - Disnaker Depok</li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Computer and Laptop Servicing (2021)</strong> - Disnaker Depok
+                        <ul style="margin-top: 1rem;">
+                            <li>Laptop and Computer Hardware Service</li>
+                            <li>Laptop and Computer Hardware Maintenance and Clean Up</li>
+                            <li>Installing/Reinstalling Operating System</li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Computer and Laptop Servicing (2019)</strong> - Language Better and Computer(LBC) Depok
+                        <ul style="margin-top: 1rem;">
+                            <li>Laptop and Computer Hardware Service</li>
+                            <li>Laptop and Computer Hardware Maintenance and Clean Up</li>
+                            <li>Installing/Reinstalling Operating System</li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Pemrograman Go-Lang : Pemula sampai Mahir (2022)</strong> - Udemy instruktur Eko Kurniawan Khannedy
+                        <ul style="margin-top: 1rem;">
+                            <li>Golang Syntax & Standard Library</li>
+                            <li>Golang Unit Test</li>
+                            <li>Golang Goroutines</li>
+                            <li>Golang RESTful API</li>
+                            <li>Golang Fiber Web Framework</li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Membuat aplikasi E Commerce Android menggunakan Bahasa Pemrograman Kotlin, PHP, Web Service dan CMS (2024)</strong> - Udemy instruktur Supriyanto
+                        <ul style="margin-top: 1rem;">
+                            <li>Kotlin Syntax & Standard Library</li>
+                            <li>PHP RESTful API</li>
+                            <li>Midtrans Payment Gateway</li>
+                            <li>Paypal Payment Gateway</li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>PHP untuk pemula - CMS System (2021)</strong> - Udemy instruktur Adi Rahman
+                        <ul style="margin-top: 1rem;">
+                            <li>Struktur Kontrol PHP & PHP Dasar</li>
+                            <li>Wireframing/Design Website</li>
+                            <li>Web Artikel Frontend</li>
+                            <li>Admin Dashboard & Login System</li>
+                        </ul>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>NodeJs: Beginner Practical Guide - E-Commerce Web API  (2022)</strong> - Udemy instruktur Fadi Nouh
+                        <ul style="margin-top: 1rem;">
+                            <li>MongoDB</li>
+                            <li>ExpressJs</li>
+                            <li>NodeJs</li>
+                            <li>RESTful API</li>
+                            <li>User Authentication</li>
+                            <li>Orders</li>
+                            <li>Deployment via Heroku</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
+            <!-- <div class="section">
+                <div class="section-title">Ijazah & Sertifikasi</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <a href="your-photo.jpg" target="_blank">
+                        <img src="your-photo.jpg" alt="Ijazah S1" style="width:150px; border:1px solid #ddd;">
+                    </a>
+                    <a href="sertifikat-aws.jpg" target="_blank">
+                        <img src="sertifikat-aws.jpg" alt="AWS Certificate" style="width:150px; border:1px solid #ddd;">
+                    </a>
+                </div>
+            </div> -->
         </div>
     </div>
 </body>
